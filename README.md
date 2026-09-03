@@ -43,25 +43,6 @@ The dataset contains exactly 10 columns:
 ---
 
 
-## 📂 File Schema (`auditd_record_types.csv`)
-
-The dataset contains exactly 10 columns:
-
-| Column | Type | Description | Example |
-| :--- | :--- | :--- | :--- |
-| `record_id` | Integer | Unique numeric identifier for the audit event type | `1300`, `1100` |
-| `type_name` | String | Standard record type name (used in `/var/log/audit/audit.log`) | `SYSCALL`, `USER_AUTH` |
-| `macro_name` | String | Linux kernel C macro definition | `AUDIT_SYSCALL` |
-| `origin` | String | Generation space: `USER` (user space) or `KERN` (kernel space) | `KERN` |
-| `class` | String | Event class: `IND` (Independent), `SC` (System call), `CTL` (Control), `DEP` (Dependent) | `SC` |
-| `category_en` | String | High-level functional category name | `Kernel audit event records` |
-| `description_en` | String | Human-readable explanation of the record's meaning and purpose | `System call audit record.` |
-| `in_audit_h` | String (`yes`/`no`) | Present in kernel C header `linux/audit.h` definitions | `yes` |
-| `in_rhel_table` | String (`yes`/`no`) | Present in RHEL audit record type reference documentation | `yes` |
-| `source` | String | Dataset provenance flag (`xlsx`, `both`, `audit.h`, `added`) | `both` |
-
----
-
 ## 🏷️ Operational Classes
 
 - **`CTL` (Control):** System management messages (e.g., enable/disable auditing, buffer rate limits). Often filtered from log output by the daemon.
