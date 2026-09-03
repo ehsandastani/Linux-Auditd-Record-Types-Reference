@@ -47,4 +47,21 @@ The dataset contains exactly 7 columns:
 
 - **`CTL` (Control):** System management messages (e.g., enable/disable auditing, buffer rate limits). Often filtered from log output by the daemon.
 - **`IND` (Independent):** Self-contained single-line records emitted immediately when an action occurs (common in user space authentication/daemons).
-- **`SC` (System Call):** Kernel-level records emitted during system call execution; usually correlated with `SYSCALL` (en.csv | cut -d',' -f1,2,7
+- **`SC` (System Call):** Kernel-level records emitted during system call execution; usually correlated with `SYSCALL`
+
+---
+
+## 🤝 Contributing
+
+Contributions to improve descriptions, add newly introduced Linux kernel audit macros, or clarify subsystem behaviors are welcome:
+
+1. Fork this repository.
+2. Create a feature branch (git checkout -b update-macro-definitions).
+3. Commit your changes and open a Pull Request.
+
+---
+
+## ⚖️ License & Disclaimer
+
+- **License:** The compiled CSV structure and documentation are provided under the MIT License. Upstream Linux kernel constants and macro names are subject to their respective kernel and distribution licensing terms.
+- **Disclaimer:** Field behaviors, availability, and logging formats may vary depending on the Linux distribution, kernel compilation flags, and auditd configuration.
