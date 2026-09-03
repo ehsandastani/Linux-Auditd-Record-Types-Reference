@@ -45,9 +45,11 @@ The dataset contains exactly 7 columns:
 
 ## 🏷️ Operational Classes
 
-- **`CTL` (Control):** System management messages (e.g., enable/disable auditing, buffer rate limits). Often filtered from log output by the daemon.
-- **`IND` (Independent):** Self-contained single-line records emitted immediately when an action occurs (common in user space authentication/daemons).
-- **`SC` (System Call):** Kernel-level records emitted during system call execution; usually correlated with `SYSCALL`
+- **`CTL` (Control):** System management messages (e.g., enable/disable auditing, buffer rate limits). Often filtered from log output by the audit daemon.
+- **`IND` (Independent):** Self-contained single-line records emitted immediately when an action occurs (common in user-space authentication and daemons).
+- **`SC` (System Call):** Kernel-level records emitted during system call execution; usually correlated under the same event ID along with `SYSCALL` records (e.g., `PATH`, `CWD`, `EXECVE`, `PROCTITLE`).
+- **`DEP` (Dependent):** Secondary records associated with other primary audit events that provide supplementary context (e.g., auxiliary kernel/SELinux context).
+
 
 ---
 
