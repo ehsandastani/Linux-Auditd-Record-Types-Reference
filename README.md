@@ -42,13 +42,8 @@ The dataset contains exactly 10 columns:
 
 ---
 
-## 🏷️ Operational Classes
 
-- **`CTL` (Control):** System management messages (e.g., enable/disable auditing1` | `yes` (141), `no` (80) |
-
----
-
-## 📂 File Schema (`auditd_record_types_en.csv`)
+## 📂 File Schema (`auditd_record_types.csv`)
 
 The dataset contains exactly 10 columns:
 
