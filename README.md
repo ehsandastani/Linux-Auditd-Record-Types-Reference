@@ -9,8 +9,8 @@ A structured, curated reference dataset of Linux Audit framework (`auditd` / ker
 The Linux Audit subsystem generates structured security event logs for system calls, authentication attempts, mandatory access control (MAC/SELinux/AppArmor) events, daemon operations, integrity monitoring, and kernel anomalies.
 
 This dataset provides a unified mapping of **221 audit record types** across kernel headers and distribution reference documentation to support:
-- Security Operations Center (SOC) detection engineering
-- SIEM field parsing and event enrichment (Splunk, Elastic, OpenSearch)
+- Security Operations Center (SOC) and detection engineering
+- SIEM field parsing and event enrichment (Splunk, Elastic)
 - Rule development for Linux host monitoring (e.g., Sigma, Auditbeat, Osquery)
 
 ---
