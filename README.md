@@ -58,7 +58,7 @@ The dataset contains exactly 7 columns:
 Contributions to improve descriptions, add newly introduced Linux kernel audit macros, or clarify subsystem behaviors are welcome:
 
 1. Fork this repository.
-2. Create a feature branch (git checkout -b update-macro-definitions).
+2. Create a feature branch (`git checkout -b update-macro-definitions`).
 3. Commit your changes and open a Pull Request.
 
 ---
