@@ -45,10 +45,18 @@ The dataset contains exactly 7 columns:
 
 ## 🏷️ Operational Classes
 
-- **`CTL` (Control):** System management messages (e.g., enable/disable auditing, buffer rate limits). Often filtered from log output by the audit daemon.
-- **`IND` (Independent):** Self-contained single-line records emitted immediately when an action occurs (common in user-space authentication and daemons).
-- **`SC` (System Call):** Kernel-level records emitted during system call execution; usually correlated under the same event ID along with `SYSCALL` records (e.g., `PATH`, `CWD`, `EXECVE`, `PROCTITLE`).
-- **`DEP` (Dependent):** Secondary records associated with other primary audit events that provide supplementary context (e.g., auxiliary kernel/SELinux context).
+- **`CTL` (Control):** System management and audit-configuration messages, such as enabling/disabling auditing, querying status, or adjusting audit parameters. These records may be filtered or handled specially by audit tooling.
+
+- **`IND` (Independent):** Self-contained records that describe an event independently, commonly emitted by user-space applications, authentication components, audit daemons, or security subsystems.
+
+- **`SC` (System Call):** Records associated with a system-call audit event. They are typically correlated using the same `audit(timestamp:serial)` identifier and may appear alongside records such as `SYSCALL`, `PATH`, `CWD`, `EXECVE`, and `PROCTITLE`.
+
+- **`DEP` (Dependent):** Records that depend on, extend, or support another audit operation—commonly control-plane or rule-management-related messages rather than fully independent events.
+
+- **`SC/IND` (System Call / Independent):** Hybrid record types whose behavior or usage may be system-call-related in some contexts and independent in others.
+
+- **`IND/SC` (Independent / System Call):** Hybrid record types classified primarily as independent but also associated with system-call event processing in certain contexts.
+
 
 
 ---
