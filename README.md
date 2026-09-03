@@ -1,1 +1,79 @@
-# Linux-Auditd-Record-Types-Reference
+# Linux Auditd Record Types Reference
+
+A structured, curated reference dataset of Linux Audit framework (`auditd` / kernel audit subsystem) event types, numeric record identifiers, origin scopes, operational classes, and functional categories.
+
+---
+
+## 📌 Overview
+
+The Linux Audit subsystem generates structured security event logs for system calls, authentication attempts, mandatory access control (MAC/SELinux/AppArmor) events, daemon operations, integrity monitoring, and kernel anomalies.
+
+This dataset provides a unified mapping of **221 audit record types** across kernel headers and distribution reference documentation to support:
+- Security Operations Center (SOC) detection engineering
+- SIEM field parsing and event enrichment (Splunk, Elastic, OpenSearch)
+- Rule development for Linux host monitoring (e.g., Sigma, Auditbeat, Osquery)
+
+---
+
+## 📊 Dataset Summary
+
+| Metric | Count | Details |
+| :--- | :--- | :--- |
+| **Total Record Types** | `221` | Numeric IDs spanning `1000` to `2507` |
+| **Origin Subsystems** | `2` | `USER` (134), `KERN` (87) |
+| **Operational Classes** | `6` | `IND` (125), `SC` (67), `CTL` (14), `DEP` (12), `SC/IND` (2), `IND/SC` (1) |
+| **Functional Categories** | `14` | Grouped from trusted apps to virtualization events |
+| **Kernel Header Presence (`audit.h`)** | `100` | `yes` (100), `no` (121) |
+| **RHEL Audit Reference Table Presence** | `141` | `yes` (141), `no` (80) |
+
+---
+
+## 📂 File Schema (`auditd_record_types_en.csv`)
+
+The dataset contains exactly 10 columns:
+
+| Column | Type | Description | Example |
+| :--- | :--- | :--- | :--- |
+| `record_id` | Integer | Unique numeric identifier for the audit event type | `1300`, `1100` |
+| `type_name` | String | Standard record type name (used in `/var/log/audit/audit.log`) | `SYSCALL`, `USER_AUTH` |
+| `macro_name` | String | Linux kernel C macro definition | `AUDIT_SYSCALL` |
+| `origin` | String | Generation space: `USER` (user space) or `KERN` (kernel space) | `KERN` |
+| `class` | String | Event class: `IND` (Independent), `SC` (System call), `CTL` (Control), `DEP` (Dependent) | `SC` |
+| `category_en` | String | High-level functional category name | `Kernel audit event records` |
+| `description_en` | String | Human-readable explanation of the record's meaning and purpose | `System call audit record.` |
+| `in_audit_h` | String (`yes`/`no`) | Present in kernel C header `linux/audit.h` definitions | `yes` |
+| `in_rhel_table` | String (`yes`/`no`) | Present in RHEL audit record type reference documentation | `yes` |
+| `source` | String | Dataset provenance flag (`xlsx`, `both`, `audit.h`, `added`) | `both` |
+
+---
+
+## 🏷️ Operational Classes
+
+- **`CTL` (Control):** System management messages (e.g., enable/disable auditing1` | `yes` (141), `no` (80) |
+
+---
+
+## 📂 File Schema (`auditd_record_types_en.csv`)
+
+The dataset contains exactly 10 columns:
+
+| Column | Type | Description | Example |
+| :--- | :--- | :--- | :--- |
+| `record_id` | Integer | Unique numeric identifier for the audit event type | `1300`, `1100` |
+| `type_name` | String | Standard record type name (used in `/var/log/audit/audit.log`) | `SYSCALL`, `USER_AUTH` |
+| `macro_name` | String | Linux kernel C macro definition | `AUDIT_SYSCALL` |
+| `origin` | String | Generation space: `USER` (user space) or `KERN` (kernel space) | `KERN` |
+| `class` | String | Event class: `IND` (Independent), `SC` (System call), `CTL` (Control), `DEP` (Dependent) | `SC` |
+| `category_en` | String | High-level functional category name | `Kernel audit event records` |
+| `description_en` | String | Human-readable explanation of the record's meaning and purpose | `System call audit record.` |
+| `in_audit_h` | String (`yes`/`no`) | Present in kernel C header `linux/audit.h` definitions | `yes` |
+| `in_rhel_table` | String (`yes`/`no`) | Present in RHEL audit record type reference documentation | `yes` |
+| `source` | String | Dataset provenance flag (`xlsx`, `both`, `audit.h`, `added`) | `both` |
+
+---
+
+## 🏷️ Operational Classes
+
+- **`CTL` (Control):** System management messages (e.g., enable/disable auditing, buffer rate limits). Often filtered from log output by the daemon.
+- **`IND` (Independent):** Self-contained single-line records emitted immediately when an action occurs (common in user space authentication/daemons).
+- **`SC` (System Call):** Kernel-level records emitted during system call execution; usually correlated with `SYSCALL` (en.csv | cut -d',' -f1,2,7
