@@ -28,7 +28,7 @@ This dataset provides a unified mapping of **221 audit record types** across ker
 
 ## 📂 File Schema (`auditd_record_types.csv`)
 
-The dataset contains exactly 10 columns:
+The dataset contains exactly 7 columns:
 
 | Column | Type | Description | Example |
 | :--- | :--- | :--- | :--- |
