@@ -1,0 +1,222 @@
+record_id,type_name,macro_name,origin,class,category,description
+1000,GET,AUDIT_GET,USER,CTL,Audit system control,Requests the status of the audit system.
+1001,SET,AUDIT_SET,USER,CTL,Audit system control,"Sets the status of the audit system (enable/disable, set auditd PID)."
+1002,LIST,AUDIT_LIST,USER,DEP,Audit system control,Lists syscall rules (deprecated).
+1003,ADD,AUDIT_ADD,USER,DEP,Audit system control,Adds a syscall rule (deprecated).
+1004,DEL,AUDIT_DEL,USER,DEP,Audit system control,Deletes a syscall rule (deprecated).
+1005,USER,AUDIT_USER,USER,DEP,Audit system control,Generic message from user space (deprecated).
+1006,LOGIN,AUDIT_LOGIN,KERN,IND,Audit system control,Triggered to record relevant login information when a user log in to access the system.
+1007,WATCH_INS,AUDIT_WATCH_INS,USER,DEP,Audit system control,Inserts a file or directory watch entry (deprecated).
+1008,WATCH_REM,AUDIT_WATCH_REM,USER,DEP,Audit system control,Removes a file or directory watch entry (deprecated).
+1009,WATCH_LIST,AUDIT_WATCH_LIST,USER,DEP,Audit system control,Lists all file and directory watches (deprecated).
+1010,SIGNAL_INFO,AUDIT_SIGNAL_INFO,USER,CTL,Audit system control,Gets information about the sender of a signal to auditd.
+1011,ADD_RULE,AUDIT_ADD_RULE,USER,CTL,Audit system control,Adds a syscall filtering rule.
+1012,DEL_RULE,AUDIT_DEL_RULE,USER,CTL,Audit system control,Deletes a syscall filtering rule.
+1013,LIST_RULES,AUDIT_LIST_RULES,USER,CTL,Audit system control,Lists the loaded syscall filtering rules.
+1014,TRIM,AUDIT_TRIM,USER,CTL,Audit system control,Trims junk entries from the watched directory tree.
+1015,MAKE_EQUIV,AUDIT_MAKE_EQUIV,USER,CTL,Audit system control,Appends a path to the watched directory tree.
+1016,TTY_GET,AUDIT_TTY_GET,USER,CTL,Audit system control,Gets the TTY auditing status.
+1017,TTY_SET,AUDIT_TTY_SET,USER,CTL,Audit system control,Sets the TTY auditing status.
+1018,SET_FEATURE,AUDIT_SET_FEATURE,USER,CTL,Audit system control,Turns an audit feature on or off.
+1019,GET_FEATURE,AUDIT_GET_FEATURE,USER,CTL,Audit system control,Gets which audit features are enabled.
+1100,USER_AUTH,AUDIT_USER_AUTH,USER,IND,Trusted user-space application messages,Triggered when a user-space authentication attempt is detected.
+1101,USER_ACCT,AUDIT_USER_ACCT,USER,IND,Trusted user-space application messages,Triggered when a user-space user account is modified.
+1102,USER_MGMT,AUDIT_USER_MGMT,USER,IND,Trusted user-space application messages,Triggered to record user-space management data.
+1103,CRED_ACQ,AUDIT_CRED_ACQ,USER,IND,Trusted user-space application messages,Triggered when a user acquires user-space credentials.
+1104,CRED_DISP,AUDIT_CRED_DISP,USER,IND,Trusted user-space application messages,Triggered when a user disposes of user-space credentials.
+1105,USER_START,AUDIT_USER_START,USER,IND,Trusted user-space application messages,Triggered when a user-space session is started.
+1106,USER_END,AUDIT_USER_END,USER,IND,Trusted user-space application messages,Triggered when a user-space session is terminated.
+1107,USER_AVC,AUDIT_USER_AVC,USER,IND,Trusted user-space application messages,Triggered when a user-space AVC message is generated.
+1108,USER_CHAUTHTOK,AUDIT_USER_CHAUTHTOK,USER,IND,Trusted user-space application messages,Triggered when a user account attribute is modified.
+1109,USER_ERR,AUDIT_USER_ERR,USER,IND,Trusted user-space application messages,Triggered when a user account state error is detected.
+1110,CRED_REFR,AUDIT_CRED_REFR,USER,IND,Trusted user-space application messages,Triggered when a user refreshes their user-space credentials.
+1111,USYS_CONFIG,AUDIT_USYS_CONFIG,USER,IND,Trusted user-space application messages,Triggered when a user-space system configuration change is detected.
+1112,USER_LOGIN,AUDIT_USER_LOGIN,USER,IND,Trusted user-space application messages,Triggered when a user logs in.
+1113,USER_LOGOUT,AUDIT_USER_LOGOUT,USER,IND,Trusted user-space application messages,Triggered when a user logs out.
+1114,ADD_USER,AUDIT_ADD_USER,USER,IND,Trusted user-space application messages,Triggered when a user-space user account is added.
+1115,DEL_USER,AUDIT_DEL_USER,USER,IND,Trusted user-space application messages,Triggered when a user-space user is deleted
+1116,ADD_GROUP,AUDIT_ADD_GROUP,USER,IND,Trusted user-space application messages,Triggered when a user-space group is added.
+1117,DEL_GROUP,AUDIT_DEL_GROUP,USER,IND,Trusted user-space application messages,Triggered when a user-space group is deleted
+1118,DAC_CHECK,AUDIT_DAC_CHECK,USER,IND,Trusted user-space application messages,Triggered to record DAC check results.
+1119,CHGRP_ID,AUDIT_CHGRP_ID,USER,IND,Trusted user-space application messages,Triggered when a user-space group ID is changed.
+1120,TEST,AUDIT_TEST,USER,IND,Trusted user-space application messages,Triggered to record the success value of a test message.
+1121,TRUSTED_APP,AUDIT_TRUSTED_APP,USER,IND,Trusted user-space application messages,The record of this type can be used by third party application that require auditing.
+1122,USER_SELINUX_ERR,AUDIT_USER_SELINUX_ERR,USER,IND,Trusted user-space application messages,Triggered when a user-space SELinux error is detected.
+1123,USER_CMD,AUDIT_USER_CMD,USER,IND,Trusted user-space application messages,Triggered when a user-space shell command is executed.
+1124,USER_TTY,AUDIT_USER_TTY,USER,IND,Trusted user-space application messages,Triggered when an explanatory message about TTY input to an administrative process is sent from user-space.
+1125,CHUSER_ID,AUDIT_CHUSER_ID,USER,IND,Trusted user-space application messages,Triggered when a user-space user ID is changed.
+1126,GRP_AUTH,AUDIT_GRP_AUTH,USER,IND,Trusted user-space application messages,Triggered when a group password is used to authenticate against a user-space group.
+1127,SYSTEM_BOOT,AUDIT_SYSTEM_BOOT,USER,IND,Trusted user-space application messages,Triggered when the system is booted up.
+1128,SYSTEM_SHUTDOWN,AUDIT_SYSTEM_SHUTDOWN,USER,IND,Trusted user-space application messages,Triggered when the system is shut down.
+1129,SYSTEM_RUNLEVEL,AUDIT_SYSTEM_RUNLEVEL,USER,IND,Trusted user-space application messages,Triggered when the system's run level is changed.
+1130,SERVICE_START,AUDIT_SERVICE_START,USER,IND,Trusted user-space application messages,Triggered when a service is started.
+1131,SERVICE_STOP,AUDIT_SERVICE_STOP,USER,IND,Trusted user-space application messages,Triggered when a service is stopped.
+1132,GRP_MGMT,AUDIT_GRP_MGMT,USER,IND,Trusted user-space application messages,Group account attribute was modified.
+1133,GRP_CHAUTHTOK,AUDIT_GRP_CHAUTHTOK,USER,IND,Trusted user-space application messages,Group account password or PIN changed.
+1134,MAC_CHECK,AUDIT_MAC_CHECK,USER,IND,Trusted user-space application messages,User space MAC (Mandatory Access Control) decision result.
+1135,ACCT_LOCK,AUDIT_ACCT_LOCK,USER,IND,Trusted user-space application messages,User's account was locked by an administrator.
+1136,ACCT_UNLOCK,AUDIT_ACCT_UNLOCK,USER,IND,Trusted user-space application messages,User's account was unlocked by an administrator.
+1137,USER_DEVICE,AUDIT_USER_DEVICE,USER,IND,Trusted user-space application messages,User space hotplug device change.
+1138,SOFTWARE_UPDATE,AUDIT_SOFTWARE_UPDATE,USER,IND,Trusted user-space application messages,Software update event.
+1200,DAEMON_START,AUDIT_DAEMON_START,USER,IND,auditd daemon internal,Triggered when the auditd daemon is started.
+1201,DAEMON_END,AUDIT_DAEMON_END,USER,IND,auditd daemon internal,Triggered when a daemon is successfully stopped.
+1202,DAEMON_ABORT,AUDIT_DAEMON_ABORT,USER,IND,auditd daemon internal,Triggered when a daemon is stopped due to an error.
+1203,DAEMON_CONFIG,AUDIT_DAEMON_CONFIG,USER,IND,auditd daemon internal,Triggered when a daemon configuration change is detected.
+1204,DAEMON_RECONFIG,AUDIT_DAEMON_RECONFIG,USER,IND,auditd daemon internal,auditd was asked to reconfigure itself.
+1205,DAEMON_ROTATE,AUDIT_DAEMON_ROTATE,USER,IND,auditd daemon internal,Triggered when the auditd daemon rotates the Audit log files.
+1206,DAEMON_RESUME,AUDIT_DAEMON_RESUME,USER,IND,auditd daemon internal,Triggered when the auditd daemon resumes logging.
+1207,DAEMON_ACCEPT,AUDIT_DAEMON_ACCEPT,USER,IND,auditd daemon internal,Triggered when the auditd daemon accepts a remote connection.
+1208,DAEMON_CLOSE,AUDIT_DAEMON_CLOSE,USER,IND,auditd daemon internal,Triggered when the auditd daemon closes a remote connection.
+1209,DAEMON_ERR,AUDIT_DAEMON_ERR,USER,IND,auditd daemon internal,auditd encountered an internal error.
+1300,SYSCALL,AUDIT_SYSCALL,KERN,SC,Kernel audit event records,Triggered to record a system call to the kernel.
+1301,FS_WATCH,AUDIT_FS_WATCH,KERN,DEP,Kernel audit event records,Old file system watch record (deprecated).
+1302,PATH,AUDIT_PATH,KERN,SC,Kernel audit event records,Triggered to record file name path information.
+1303,IPC,AUDIT_IPC,KERN,SC,Kernel audit event records,Triggered to record information about a Inter-Process Communication object referenced by a system call.
+1304,SOCKETCALL,AUDIT_SOCKETCALL,KERN,SC,Kernel audit event records,Triggered to record arguments of the sys_socketcall system call (used to multiplex many socket-related system calls).
+1305,CONFIG_CHANGE,AUDIT_CONFIG_CHANGE,KERN,IND,Kernel audit event records,Triggered when the Audit system configuration is modified.
+1306,SOCKADDR,AUDIT_SOCKADDR,KERN,SC,Kernel audit event records,Triggered to record a socket address.
+1307,CWD,AUDIT_CWD,KERN,SC,Kernel audit event records,Triggered to record the current working directory.
+1309,EXECVE,AUDIT_EXECVE,KERN,SC,Kernel audit event records,Triggered to record arguments of the execve(2) system call.
+1311,IPC_SET_PERM,AUDIT_IPC_SET_PERM,KERN,SC,Kernel audit event records,Triggered to record information about new values set by an IPC_SET control operation on an IPC object.
+1312,MQ_OPEN,AUDIT_MQ_OPEN,KERN,SC,Kernel audit event records,Triggered to record arguments of the mq_open(3) system call.
+1313,MQ_SENDRECV,AUDIT_MQ_SENDRECV,KERN,SC,Kernel audit event records,Triggered to record arguments of the mq_send(3) and mq_receive(3) system calls.
+1314,MQ_NOTIFY,AUDIT_MQ_NOTIFY,KERN,SC,Kernel audit event records,Triggered to record arguments of the mq_notify(3) system call.
+1315,MQ_GETSETATTR,AUDIT_MQ_GETSETATTR,KERN,SC,Kernel audit event records,Triggered to record the mq_getattr(3) and mq_setattr(3) message queue attributes.
+1316,KERNEL_OTHER,AUDIT_KERNEL_OTHER,KERN,IND,Kernel audit event records,Triggered to record information from third-party kernel modules.
+1317,FD_PAIR,AUDIT_FD_PAIR,KERN,SC,Kernel audit event records,Triggered to record the use of the pipe and socketpair system calls.
+1318,OBJ_PID,AUDIT_OBJ_PID,KERN,SC,Kernel audit event records,Triggered to record information about a process to which a signal is sent.
+1319,TTY,AUDIT_TTY,KERN,IND,Kernel audit event records,Triggered when TTY input was sent to an administrative process.
+1320,EOE,AUDIT_EOE,KERN,CTL,Kernel audit event records,Triggered to record the end of a multi-record event.
+1321,BPRM_FCAPS,AUDIT_BPRM_FCAPS,KERN,SC,Kernel audit event records,Triggered when a user executes a program with a file system capability.
+1322,CAPSET,AUDIT_CAPSET,KERN,SC,Kernel audit event records,Triggered to record any changes in process-based capabilities.
+1323,MMAP,AUDIT_MMAP,KERN,SC,Kernel audit event records,Triggered to record a file descriptor and flags of the mmap(2) system call.
+1324,NETFILTER_PKT,AUDIT_NETFILTER_PKT,KERN,IND,Kernel audit event records,Triggered to record packets traversing Netfilter chains.
+1325,NETFILTER_CFG,AUDIT_NETFILTER_CFG,KERN,IND/SC,Kernel audit event records,Triggered when Netfilter chain modifications are detected.
+1326,SECCOMP,AUDIT_SECCOMP,KERN,IND,Kernel audit event records,Secure Computing (seccomp) event.
+1327,PROCTITLE,AUDIT_PROCTITLE,KERN,SC,Kernel audit event records,Full command line of the process (hex encoded).
+1328,FEATURE_CHANGE,AUDIT_FEATURE_CHANGE,KERN,IND,Kernel audit event records,An audit feature changed value.
+1329,REPLACE,AUDIT_REPLACE,KERN,CTL,Kernel audit event records,Replaces auditd if a probe goes unanswered.
+1330,KERN_MODULE,AUDIT_KERN_MODULE,KERN,SC,Kernel audit event records,Kernel module load/unload event.
+1331,FANOTIFY,AUDIT_FANOTIFY,KERN,SC,Kernel audit event records,fanotify access decision.
+1332,TIME_INJOFFSET,AUDIT_TIME_INJOFFSET,KERN,SC,Kernel audit event records,Timekeeping offset was injected.
+1333,TIME_ADJNTPVAL,AUDIT_TIME_ADJNTPVAL,KERN,SC,Kernel audit event records,NTP value adjustment.
+1334,BPF,AUDIT_BPF,KERN,SC,Kernel audit event records,BPF program load/unload.
+1335,EVENT_LISTENER,AUDIT_EVENT_LISTENER,KERN,SC,Kernel audit event records,A task joined or left the audit multicast read socket.
+1336,URINGOP,AUDIT_URINGOP,KERN,SC,Kernel audit event records,io_uring operation.
+1337,OPENAT2,AUDIT_OPENAT2,KERN,SC,Kernel audit event records,how arguments of the openat2 system call.
+1338,DM_CTRL,AUDIT_DM_CTRL,KERN,SC,Kernel audit event records,Device Mapper target control.
+1339,DM_EVENT,AUDIT_DM_EVENT,KERN,SC,Kernel audit event records,Device Mapper event.
+1400,AVC,AUDIT_AVC,KERN,SC,Kernel SELinux / MAC / LSM,Triggered to record an SELinux permission check.
+1401,SELINUX_ERR,AUDIT_SELINUX_ERR,KERN,SC,Kernel SELinux / MAC / LSM,Triggered when an internal SELinux error is detected.
+1402,AVC_PATH,AUDIT_AVC_PATH,KERN,SC,Kernel SELinux / MAC / LSM,Triggered to record the dentry and vfsmount pair when an SELinux permission check occurs.
+1403,MAC_POLICY_LOAD,AUDIT_MAC_POLICY_LOAD,KERN,SC,Kernel SELinux / MAC / LSM,Triggered when a SELinux policy file is loaded.
+1404,MAC_STATUS,AUDIT_MAC_STATUS,KERN,SC,Kernel SELinux / MAC / LSM,"Triggered when the SELinux mode (enforcing, permissive, off) is changed."
+1405,MAC_CONFIG_CHANGE,AUDIT_MAC_CONFIG_CHANGE,KERN,SC,Kernel SELinux / MAC / LSM,Triggered when an SELinux Boolean value is changed.
+1406,MAC_UNLBL_ALLOW,AUDIT_MAC_UNLBL_ALLOW,KERN,SC,Kernel SELinux / MAC / LSM,Triggered when unlabeled traffic is allowed when using the packet labeling capabilities of the kernel provided by NetLabel.
+1407,MAC_CIPSOV4_ADD,AUDIT_MAC_CIPSOV4_ADD,KERN,SC,Kernel SELinux / MAC / LSM,Triggered when a Commercial Internet Protocol Security Option (CIPSO) user adds a new Domain of Interpretation (DOI). Adding DOIs is a part of the packet labeling capabilities of the kernel provided by NetLabel.
+1408,MAC_CIPSOV4_DEL,AUDIT_MAC_CIPSOV4_DEL,KERN,SC,Kernel SELinux / MAC / LSM,Triggered when a CIPSO user deletes an existing DOI. Adding DOIs is a part of the packet labeling capabilities of the kernel provided by NetLabel.
+1409,MAC_MAP_ADD,AUDIT_MAC_MAP_ADD,KERN,SC,Kernel SELinux / MAC / LSM,Triggered when a new Linux Security Module (LSM) domain mapping is added. LSM domain mapping is a part of the packet labeling capabilities of the kernel provided by NetLabel.
+1410,MAC_MAP_DEL,AUDIT_MAC_MAP_DEL,KERN,SC,Kernel SELinux / MAC / LSM,Triggered when an existing LSM domain mapping is added. LSM domain mapping is a part of the packet labeling capabilities of the kernel provided by NetLabel.
+1411,MAC_IPSEC_ADDSA,AUDIT_MAC_IPSEC_ADDSA,KERN,DEP,Kernel SELinux / MAC / LSM,Not used.
+1412,MAC_IPSEC_DELSA,AUDIT_MAC_IPSEC_DELSA,KERN,DEP,Kernel SELinux / MAC / LSM,Not used.
+1413,MAC_IPSEC_ADDSPD,AUDIT_MAC_IPSEC_ADDSPD,KERN,DEP,Kernel SELinux / MAC / LSM,Not used.
+1414,MAC_IPSEC_DELSPD,AUDIT_MAC_IPSEC_DELSPD,KERN,DEP,Kernel SELinux / MAC / LSM,Not used.
+1415,MAC_IPSEC_EVENT,AUDIT_MAC_IPSEC_EVENT,KERN,SC,Kernel SELinux / MAC / LSM,"Triggered to record information about an IPSec event, when one is detected, or when the IPSec configuration changes."
+1416,MAC_UNLBL_STCADD,AUDIT_MAC_UNLBL_STCADD,KERN,SC,Kernel SELinux / MAC / LSM,Triggered when a static label is added when using the packet labeling capabilities of the kernel provided by NetLabel.
+1417,MAC_UNLBL_STCDEL,AUDIT_MAC_UNLBL_STCDEL,KERN,SC,Kernel SELinux / MAC / LSM,Triggered when a static label is deleted when using the packet labeling capabilities of the kernel provided by NetLabel.
+1418,MAC_CALIPSO_ADD,AUDIT_MAC_CALIPSO_ADD,KERN,SC,Kernel SELinux / MAC / LSM,NetLabel: a CALIPSO DOI entry was added.
+1419,MAC_CALIPSO_DEL,AUDIT_MAC_CALIPSO_DEL,KERN,SC,Kernel SELinux / MAC / LSM,NetLabel: a CALIPSO DOI entry was deleted.
+1420,IPE_ACCESS,AUDIT_IPE_ACCESS,KERN,SC,Kernel SELinux / MAC / LSM,IPE (Integrity Policy Enforcement) denial or grant.
+1421,IPE_CONFIG_CHANGE,AUDIT_IPE_CONFIG_CHANGE,KERN,SC,Kernel SELinux / MAC / LSM,IPE configuration change.
+1422,IPE_POLICY_LOAD,AUDIT_IPE_POLICY_LOAD,KERN,SC,Kernel SELinux / MAC / LSM,An IPE policy was loaded.
+1423,LANDLOCK_ACCESS,AUDIT_LANDLOCK_ACCESS,KERN,SC,Kernel SELinux / MAC / LSM,Landlock denial.
+1424,LANDLOCK_DOMAIN,AUDIT_LANDLOCK_DOMAIN,KERN,SC,Kernel SELinux / MAC / LSM,Landlock domain status.
+1425,MAC_TASK_CONTEXTS,AUDIT_MAC_TASK_CONTEXTS,KERN,SC,Kernel SELinux / MAC / LSM,Multiple LSM task (subject) contexts.
+1426,MAC_OBJ_CONTEXTS,AUDIT_MAC_OBJ_CONTEXTS,KERN,SC,Kernel SELinux / MAC / LSM,Multiple LSM object contexts.
+1500,AA,AUDIT_AA,KERN,IND,AppArmor events,Generic AppArmor event.
+1501,APPARMOR_AUDIT,AUDIT_APPARMOR_AUDIT,KERN,SC,AppArmor events,AppArmor audited an access.
+1502,APPARMOR_ALLOWED,AUDIT_APPARMOR_ALLOWED,KERN,SC,AppArmor events,AppArmor allowed an access.
+1503,APPARMOR_DENIED,AUDIT_APPARMOR_DENIED,KERN,SC,AppArmor events,AppArmor denied an access.
+1504,APPARMOR_HINT,AUDIT_APPARMOR_HINT,KERN,SC,AppArmor events,AppArmor hint message.
+1505,APPARMOR_STATUS,AUDIT_APPARMOR_STATUS,KERN,SC,AppArmor events,AppArmor status change.
+1506,APPARMOR_ERROR,AUDIT_APPARMOR_ERROR,KERN,SC,AppArmor events,AppArmor internal error.
+1507,APPARMOR_KILL,AUDIT_APPARMOR_KILL,KERN,SC,AppArmor events,AppArmor killed a process.
+1700,ANOM_PROMISCUOUS,AUDIT_ANOM_PROMISCUOUS,KERN,SC/IND,Kernel anomaly records,Triggered when a device enables or disables promiscuous mode.
+1701,ANOM_ABEND,AUDIT_ANOM_ABEND,KERN,IND,Kernel anomaly records,"Triggered when a processes ends abnormally (with a signal that could cause a core dump, if enabled)."
+1702,ANOM_LINK,AUDIT_ANOM_LINK,KERN,SC,Kernel anomaly records,Suspicious use of file links.
+1703,ANOM_CREAT,AUDIT_ANOM_CREAT,KERN,SC,Kernel anomaly records,Suspicious file creation.
+1800,INTEGRITY_DATA,AUDIT_INTEGRITY_DATA,KERN,SC,Kernel integrity (IMA/EVM),Triggered to record a data integrity verification event run by the kernel.
+1801,INTEGRITY_METADATA,AUDIT_INTEGRITY_METADATA,KERN,SC,Kernel integrity (IMA/EVM),Triggered to record a metadata integrity verification event run by the kernel.
+1802,INTEGRITY_STATUS,AUDIT_INTEGRITY_STATUS,KERN,SC,Kernel integrity (IMA/EVM),Triggered to record the status of integrity verification.
+1803,INTEGRITY_HASH,AUDIT_INTEGRITY_HASH,KERN,SC,Kernel integrity (IMA/EVM),Triggered to record a hash type integrity verification event run by the kernel.
+1804,INTEGRITY_PCR,AUDIT_INTEGRITY_PCR,KERN,SC,Kernel integrity (IMA/EVM),Triggered to record Platform Configuration Register (PCR) invalidation messages.
+1805,INTEGRITY_RULE,AUDIT_INTEGRITY_RULE,KERN,SC/IND,Kernel integrity (IMA/EVM),Triggered to record a policy rule.
+1806,INTEGRITY_EVM_XATTR,AUDIT_INTEGRITY_EVM_XATTR,KERN,SC,Kernel integrity (IMA/EVM),An EVM-covered extended attribute was modified.
+1807,INTEGRITY_POLICY_RULE,AUDIT_INTEGRITY_POLICY_RULE,KERN,SC,Kernel integrity (IMA/EVM),IMA policy rule.
+2000,KERNEL,AUDIT_KERNEL,KERN,IND,Unclassified kernel messages,Triggered to record the initialization of the Audit system.
+2100,ANOM_LOGIN_FAILURES,AUDIT_ANOM_LOGIN_FAILURES,USER,IND,User-space anomaly records,Triggered when the limit of failed login attempts is reached.
+2101,ANOM_LOGIN_TIME,AUDIT_ANOM_LOGIN_TIME,USER,IND,User-space anomaly records,"Triggered when a login attempt is made at a time when it is prevented by, for example, pam_time."
+2102,ANOM_LOGIN_SESSIONS,AUDIT_ANOM_LOGIN_SESSIONS,USER,IND,User-space anomaly records,Triggered when a login attempt reaches the maximum amount of concurrent sessions.
+2103,ANOM_LOGIN_ACCT,AUDIT_ANOM_LOGIN_ACCT,USER,IND,User-space anomaly records,Triggered when an account login attempt ends abnormally.
+2104,ANOM_LOGIN_LOCATION,AUDIT_ANOM_LOGIN_LOCATION,USER,IND,User-space anomaly records,Triggered when a login attempt is made from a forbidden location.
+2105,ANOM_MAX_DAC,AUDIT_ANOM_MAX_DAC,USER,IND,User-space anomaly records,Triggered when the maximum amount of Discretionary Access Control (DAC) failures is reached.
+2106,ANOM_MAX_MAC,AUDIT_ANOM_MAX_MAC,USER,IND,User-space anomaly records,Triggered when the maximum amount of Mandatory Access Control (MAC) failures is reached.
+2107,ANOM_AMTU_FAIL,AUDIT_ANOM_AMTU_FAIL,USER,IND,User-space anomaly records,Triggered when a failure of the Abstract Machine Test Utility (AMTU) is detected.
+2108,ANOM_RBAC_FAIL,AUDIT_ANOM_RBAC_FAIL,USER,IND,User-space anomaly records,Triggered when a Role-Based Access Control (RBAC) self-test failure is detected.
+2109,ANOM_RBAC_INTEGRITY_FAIL,AUDIT_ANOM_RBAC_INTEGRITY_FAIL,USER,IND,User-space anomaly records,Triggered when a Role-Based Access Control (RBAC) file integrity test failure is detected.
+2110,ANOM_CRYPTO_FAIL,AUDIT_ANOM_CRYPTO_FAIL,USER,IND,User-space anomaly records,Triggered when a failure in the cryptographic system is detected.
+2111,ANOM_ACCESS_FS,AUDIT_ANOM_ACCESS_FS,USER,IND,User-space anomaly records,Triggered when a file or a directory access ends abnormally.
+2112,ANOM_EXEC,AUDIT_ANOM_EXEC,USER,IND,User-space anomaly records,Triggered when an execution of a file ends abnormally.
+2113,ANOM_MK_EXEC,AUDIT_ANOM_MK_EXEC,USER,IND,User-space anomaly records,Triggered when a file is made executable.
+2114,ANOM_ADD_ACCT,AUDIT_ANOM_ADD_ACCT,USER,IND,User-space anomaly records,Triggered when a user-space account addition ends abnormally.
+2115,ANOM_DEL_ACCT,AUDIT_ANOM_DEL_ACCT,USER,IND,User-space anomaly records,Triggered when a user-space account deletion ends abnormally.
+2116,ANOM_MOD_ACCT,AUDIT_ANOM_MOD_ACCT,USER,IND,User-space anomaly records,Triggered when a user-space account modification ends abnormally.
+2117,ANOM_ROOT_TRANS,AUDIT_ANOM_ROOT_TRANS,USER,IND,User-space anomaly records,Triggered when a user becomes root.
+2118,ANOM_LOGIN_SERVICE,AUDIT_ANOM_LOGIN_SERVICE,USER,IND,User-space anomaly records,A service account attempted to log in.
+2200,RESP_ANOMALY,AUDIT_RESP_ANOMALY,USER,IND,IDS response actions,Triggered when an anomaly was not acted upon.
+2201,RESP_ALERT,AUDIT_RESP_ALERT,USER,IND,IDS response actions,Triggered when an alert email is sent.
+2202,RESP_KILL_PROC,AUDIT_RESP_KILL_PROC,USER,IND,IDS response actions,Triggered when a process is terminated.
+2203,RESP_TERM_ACCESS,AUDIT_RESP_TERM_ACCESS,USER,IND,IDS response actions,Triggered when a session is terminated.
+2204,RESP_ACCT_REMOTE,AUDIT_RESP_ACCT_REMOTE,USER,IND,IDS response actions,Triggered when a user account is locked from a remote session.
+2205,RESP_ACCT_LOCK_TIMED,AUDIT_RESP_ACCT_LOCK_TIMED,USER,IND,IDS response actions,Triggered when a user account is locked for a specified period of time.
+2206,RESP_ACCT_UNLOCK_TIMED,AUDIT_RESP_ACCT_UNLOCK_TIMED,USER,IND,IDS response actions,Triggered when a user account is unlocked after a configured period of time.
+2207,RESP_ACCT_LOCK,AUDIT_RESP_ACCT_LOCK,USER,IND,IDS response actions,Triggered when a user account is locked.
+2208,RESP_TERM_LOCK,AUDIT_RESP_TERM_LOCK,USER,IND,IDS response actions,Triggered when a terminal is locked.
+2209,RESP_SEBOOL,AUDIT_RESP_SEBOOL,USER,IND,IDS response actions,Triggered when an SELinux Boolean value is set.
+2210,RESP_EXEC,AUDIT_RESP_EXEC,USER,IND,IDS response actions,Triggered when an intrusion detection program responds to a threat originating from the execution of a program.
+2211,RESP_SINGLE,AUDIT_RESP_SINGLE,USER,IND,IDS response actions,Triggered when the system is put into single-user mode.
+2212,RESP_HALT,AUDIT_RESP_HALT,USER,IND,IDS response actions,Triggered when the system is shut down.
+2213,RESP_ORIGIN_BLOCK,AUDIT_RESP_ORIGIN_BLOCK,USER,IND,IDS response actions,A remote address was blocked by iptables.
+2214,RESP_ORIGIN_BLOCK_TIMED,AUDIT_RESP_ORIGIN_BLOCK_TIMED,USER,IND,IDS response actions,A remote address was blocked for a period of time.
+2300,USER_ROLE_CHANGE,AUDIT_USER_ROLE_CHANGE,USER,IND,User-space LSPP events,Triggered when a user's SELinux role is changed.
+2301,ROLE_ASSIGN,AUDIT_ROLE_ASSIGN,USER,IND,User-space LSPP events,Triggered when an administrator assigns a user to an SELinux role.
+2302,ROLE_REMOVE,AUDIT_ROLE_REMOVE,USER,IND,User-space LSPP events,Triggered when an administrator removes a user from an SELinux role.
+2303,LABEL_OVERRIDE,AUDIT_LABEL_OVERRIDE,USER,IND,User-space LSPP events,Triggered when an administrator overrides an object's level label.
+2304,LABEL_LEVEL_CHANGE,AUDIT_LABEL_LEVEL_CHANGE,USER,IND,User-space LSPP events,Triggered when an object's level label is modified.
+2305,USER_LABELED_EXPORT,AUDIT_USER_LABELED_EXPORT,USER,IND,User-space LSPP events,Triggered when an object is exported with an SELinux label.
+2306,USER_UNLABELED_EXPORT,AUDIT_USER_UNLABELED_EXPORT,USER,IND,User-space LSPP events,Triggered when an object is exported without SELinux label.
+2307,DEV_ALLOC,AUDIT_DEV_ALLOC,USER,IND,User-space LSPP events,Triggered when a device is allocated.
+2308,DEV_DEALLOC,AUDIT_DEV_DEALLOC,USER,IND,User-space LSPP events,Triggered when a device is deallocated.
+2309,FS_RELABEL,AUDIT_FS_RELABEL,USER,IND,User-space LSPP events,Triggered when a file system relabel operation is detected.
+2310,USER_MAC_POLICY_LOAD,AUDIT_USER_MAC_POLICY_LOAD,USER,IND,User-space LSPP events,Triggered when a user-space daemon loads an SELinux policy.
+2311,ROLE_MODIFY,AUDIT_ROLE_MODIFY,USER,IND,User-space LSPP events,Triggered when an administrator modifies an SELinux role.
+2312,USER_MAC_CONFIG_CHANGE,AUDIT_USER_MAC_CONFIG_CHANGE,USER,IND,User-space LSPP events,A change was made to the MAC policy from user space.
+2313,USER_MAC_STATUS,AUDIT_USER_MAC_STATUS,USER,IND,User-space LSPP events,A user space daemon changed the enforcing status.
+2400,CRYPTO_TEST_USER,AUDIT_CRYPTO_TEST_USER,USER,IND,User-space crypto events,Triggered to record cryptographic test results as required by the FIPS-140 standard.
+2401,CRYPTO_PARAM_CHANGE_USER,AUDIT_CRYPTO_PARAM_CHANGE_USER,USER,IND,User-space crypto events,Triggered when a change in a cryptographic parameter is detected.
+2402,CRYPTO_LOGIN,AUDIT_CRYPTO_LOGIN,USER,IND,User-space crypto events,Triggered when a cryptographic officer login attempt is detected.
+2403,CRYPTO_LOGOUT,AUDIT_CRYPTO_LOGOUT,USER,IND,User-space crypto events,Triggered when a crypto officer logout attempt is detected.
+2404,CRYPTO_KEY_USER,AUDIT_CRYPTO_KEY_USER,USER,IND,User-space crypto events,Triggered to record the cryptographic key identifier used for cryptographic purposes.
+2405,CRYPTO_FAILURE_USER,AUDIT_CRYPTO_FAILURE_USER,USER,IND,User-space crypto events,"Triggered when a decrypt, encrypt, or randomize cryptographic operation fails."
+2406,CRYPTO_REPLAY_USER,AUDIT_CRYPTO_REPLAY_USER,USER,IND,User-space crypto events,Triggered when a replay attack is detected.
+2407,CRYPTO_SESSION,AUDIT_CRYPTO_SESSION,USER,IND,User-space crypto events,Triggered to record parameters set during a TLS session establishment.
+2408,CRYPTO_IKE_SA,AUDIT_CRYPTO_IKE_SA,USER,IND,User-space crypto events,Parameters related to an IKE security association.
+2409,CRYPTO_IPSEC_SA,AUDIT_CRYPTO_IPSEC_SA,USER,IND,User-space crypto events,Parameters related to an IPsec security association.
+2500,VIRT_CONTROL,AUDIT_VIRT_CONTROL,USER,IND,Virtualization management,"Triggered when a virtual machine is started, paused, or stopped."
+2501,VIRT_RESOURCE,AUDIT_VIRT_RESOURCE,USER,IND,Virtualization management,Triggered to record resource assignment of a virtual machine.
+2502,VIRT_MACHINE_ID,AUDIT_VIRT_MACHINE_ID,USER,IND,Virtualization management,Triggered to record the binding of a label to a virtual machine.
+2503,VIRT_INTEGRITY_CHECK,AUDIT_VIRT_INTEGRITY_CHECK,USER,IND,Virtualization management,Guest integrity check results.
+2504,VIRT_CREATE,AUDIT_VIRT_CREATE,USER,IND,Virtualization management,A guest image was created.
+2505,VIRT_DESTROY,AUDIT_VIRT_DESTROY,USER,IND,Virtualization management,A guest image was destroyed.
+2506,VIRT_MIGRATE_IN,AUDIT_VIRT_MIGRATE_IN,USER,IND,Virtualization management,Inbound guest migration information.
+2507,VIRT_MIGRATE_OUT,AUDIT_VIRT_MIGRATE_OUT,USER,IND,Virtualization management,Outbound guest migration information.
