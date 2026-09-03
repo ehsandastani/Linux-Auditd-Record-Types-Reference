@@ -23,8 +23,6 @@ This dataset provides a unified mapping of **221 audit record types** across ker
 | **Origin Subsystems** | `2` | `USER` (134), `KERN` (87) |
 | **Operational Classes** | `6` | `IND` (125), `SC` (67), `CTL` (14), `DEP` (12), `SC/IND` (2), `IND/SC` (1) |
 | **Functional Categories** | `14` | Grouped from trusted apps to virtualization events |
-| **Kernel Header Presence (`audit.h`)** | `100` | `yes` (100), `no` (121) |
-| **RHEL Audit Reference Table Presence** | `141` | `yes` (141), `no` (80) |
 
 ---
 
